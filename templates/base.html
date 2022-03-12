@@ -1,0 +1,132 @@
+<!Doctype html>
+<html lang="en" class="h-100">
+  {%load static%}
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+    {% include 'partials/bootcss.html' %}
+    
+    <title> {% block title %} {% endblock title %} | KING </title>
+
+  </head>
+  <body>
+    <style>
+    strong {
+        color: rgb(255, 255, 255);
+    }
+    m{
+        color: rgba(209, 47, 47, 0.925);
+    }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mx-auto my-0 py-0 px-4" id="navbar">
+
+            <div class="container-fluid">
+
+                <a class="navbar-brand me-2">
+                <img src="/static/4.png" alt="King logo" width="62px" height="61px"><span class="sr-only"></span></a><h2><strong><m>CHIT</m>[O_O]<m>CHAT</m></strong></h2>
+                </a>
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> 
+                </button>
+
+                <div class="collapse navbar-collapse mx-4 px-4" id="navbarNav">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item" title='HOME'>
+                    <a class="nav-link active" aria-current="page" href="/home">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentcolor" class="bi bi-house-fill mx-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                        </svg><strong>HOME</strong><span class="sr-only"></span>
+                    </a>
+                    </li>
+
+                    <li class="nav-item px-2" title='SERVICES'>
+                    <a class="nav-link active" href="/services">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentcolor" class="bi bi-columns-gap mx-2" viewBox="0 0 16 16">
+                        <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+                        </svg><strong>SERVICES</strong>
+                    </a>
+                    </li>
+
+                    <li class="nav-item px-2" title='ABOUT'>
+                    <a class="nav-link active" href="/about">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentcolor" class="bi bi-robot mx-2" viewBox="0 0 16 16">
+                        <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"/>
+                        <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z"/>
+                        </svg><strong>ABOUT</strong>
+                    </a>
+                    </li>
+
+                    <li class="nav-item px-2" title='CONTACT'>
+                    <a class="nav-link active" href="/contact">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentcolor" class="bi bi-headset mx-2" viewBox="0 0 16 16">
+                        <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+                        </svg><strong>CONTACT</strong>
+                    </a>
+                    </li>
+
+                    <div class="container-fluid" style="width:20rem"></div>
+
+                    {% if user.is_authenticated %}
+                    <li class="nav-item px-1" title='USER'>
+                        <a class="nav-link active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgb(0, 255, 42)" class="bi bi-person-workspace text-center mx-2" viewBox="0 0 16 16">
+                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                            </svg>
+                            <strong>{{user.username}}</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item px-1" title="CHATS">
+                        <a class="nav-link active" href="/chats">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="blue" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                            <strong>CHATS</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item px-1" title="LOGOUT">
+                        <a class="nav-link active" href="/logout">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="rgba(209, 47, 47, 0.925)" class="bi bi-box-arrow-left mx-2" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                                <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                            </svg>
+                            <strong>Logout</strong>
+                        </a>
+                    </li>
+                    {% endif %}
+
+                </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    {% block body %} {% endblock body %}
+
+    {%include 'partials/bootjs.html'%}
+
+  </body>
+
+</html>

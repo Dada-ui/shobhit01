@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}search{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+        <div class="row mx-auto">
+            {% if products %}
+                <div class="container">
+                    <hr class="text-center mx-auto col-sm-3">
+                    <h3 class="text-center">{{search.se}}</h3>
+                    <hr class="text-center mx-auto col-sm-3">
+                </div>
+            {% else %}
+                <div class="container my-5">
+                    <hr class="text-center mx-auto col-sm-3">
+                    <h3 class="text-center">Search result : None</h3>
+                    <hr class="text-center mx-auto col-sm-3">
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock body %}
